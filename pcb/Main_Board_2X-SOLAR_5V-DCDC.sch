@@ -17275,7 +17275,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="BATT" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="R11" library="adafruit" deviceset="R-US_" device="FLIPFLOP" value="2K"/>
+<part name="R11" library="adafruit" deviceset="R-US_" device="FLIPFLOP" value="1K"/>
 <part name="R12" library="adafruit" deviceset="R-US_" device="R0805" value="100K"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
@@ -17332,7 +17332,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="BATT1" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="R15" library="adafruit" deviceset="R-US_" device="FLIPFLOP" value="2K"/>
+<part name="R15" library="adafruit" deviceset="R-US_" device="FLIPFLOP" value="1K"/>
 <part name="R16" library="adafruit" deviceset="R-US_" device="R0805" value="100K"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
