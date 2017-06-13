@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -16916,6 +16916,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="40.64" y1="80.01" x2="38.1" y2="80.01" width="0.1524" layer="91"/>
 <wire x1="34.29" y1="115.57" x2="34.29" y2="80.01" width="0.1524" layer="91"/>
 <junction x="34.29" y="80.01"/>
+<junction x="40.64" y="115.57"/>
 </segment>
 </net>
 <net name="VPCC" class="0">
@@ -17293,9 +17294,9 @@ Source: AVX .. aphvc.pdf</description>
 <net name="T2-BASE_LBO" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="LBO"/>
-<wire x1="304.8" y1="54.61" x2="312.42" y2="54.61" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="54.61" x2="312.42" y2="49.53" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="49.53" x2="322.58" y2="49.53" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="54.61" x2="307.34" y2="54.61" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="54.61" x2="307.34" y2="49.53" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="49.53" x2="322.58" y2="49.53" width="0.1524" layer="91"/>
 <pinref part="T2" gate="G$1" pin="B"/>
 <label x="311.71" y="46.655" size="1.778" layer="95"/>
 </segment>
@@ -17375,14 +17376,14 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="JP1" gate="A" pin="1"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="DIODE_PROT_1" class="0">
 <segment>
 <pinref part="D3" gate="G$1" pin="A"/>
 <pinref part="JP2" gate="A" pin="2"/>
 <wire x1="185.42" y1="101.6" x2="189.23" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="DIODE_PROT" class="0">
 <segment>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="JP1" gate="A" pin="2"/>
