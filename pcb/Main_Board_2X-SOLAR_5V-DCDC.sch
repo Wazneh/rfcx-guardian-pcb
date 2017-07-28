@@ -14343,6 +14343,22 @@ Source: AVX .. aphvc.pdf</description>
 <rectangle x1="1.34" y1="-0.35" x2="1.59" y2="0.35" layer="51"/>
 <rectangle x1="-1.36" y1="-1.05" x2="-1.26" y2="1.05" layer="21"/>
 </package>
+<package name="XAL1010">
+<smd name="P$1" x="-3.325" y="0" dx="2.38" dy="9" layer="1"/>
+<smd name="P$2" x="3.325" y="0" dx="2.38" dy="9" layer="1"/>
+</package>
+<package name="4-TERM-RESISTOR-SUMUSU">
+<smd name="P$1" x="-0.675" y="-0.4" dx="0.55" dy="2.8" layer="1"/>
+<smd name="P$2" x="0.675" y="-0.4" dx="0.55" dy="2.8" layer="1"/>
+<smd name="P$3" x="-0.675" y="1.5475" dx="0.55" dy="0.5" layer="1"/>
+<smd name="P$4" x="0.675" y="1.5475" dx="0.55" dy="0.5" layer="1"/>
+<wire x1="-0.8" y1="1.56" x2="-0.8" y2="-1.64" width="0.2" layer="51"/>
+<wire x1="-0.8" y1="-1.64" x2="0.8" y2="-1.64" width="0.2" layer="51"/>
+<wire x1="0.8" y1="-1.64" x2="0.8" y2="1.56" width="0.2" layer="51"/>
+<wire x1="-0.8" y1="1.56" x2="0.8" y2="1.56" width="0.2" layer="51"/>
+<text x="2.54" y="-5.08" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-1.27" y="-5.08" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="FDMC8327L">
@@ -14387,6 +14403,32 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="COILCRAFT_INDUCTOR">
+<wire x1="-5.0038" y1="5.6515" x2="5.0038" y2="5.6515" width="0.254" layer="94"/>
+<wire x1="5.0038" y1="5.6515" x2="5.0038" y2="-5.6515" width="0.254" layer="94"/>
+<wire x1="5.0038" y1="-5.6515" x2="-5.0038" y2="-5.6515" width="0.254" layer="94"/>
+<wire x1="-5.0038" y1="-5.6515" x2="-5.0038" y2="5.6515" width="0.254" layer="94"/>
+<text x="-2.54" y="2.1844" size="1.778" layer="94" rot="R270">XXX</text>
+<circle x="0" y="0" radius="4.445" width="0.254" layer="94"/>
+<text x="2.8956" y="0.254" size="2.54" layer="94" font="fixed" rot="MR180" align="center-right">C</text>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="point" direction="pas"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="point"/>
+</symbol>
+<symbol name="4-TERM-RESISTOR">
+<rectangle x1="-2.54" y1="-1.27" x2="2.54" y2="1.27" layer="94"/>
+<pin name="1" x="-7.62" y="2.54" visible="off" length="short" direction="pas"/>
+<pin name="2" x="7.62" y="2.54" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="3" x="-7.62" y="-2.54" visible="off" length="short" direction="pas"/>
+<pin name="4" x="7.62" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-2.54" y="3.048" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-4.572" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="-2.54" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FDMC8327L">
@@ -14420,6 +14462,132 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <connect gate="G$1" pin="P$1" pad="C"/>
 <connect gate="G$1" pin="P$2" pad="A"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="XAL1010-103ME">
+<gates>
+<gate name="G$1" symbol="COILCRAFT_INDUCTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-103ME" package="XAL1010">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KRL3216T4A-M-R004-F-T1">
+<gates>
+<gate name="G$1" symbol="4-TERM-RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="4-TERM-RESISTOR-SUMUSU">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-Aesthetics">
+<description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
+This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="CREATIVE_COMMONS">
+<description>&lt;h3&gt;Creative Commons License Template&lt;/h3&gt;
+&lt;p&gt;CC BY-SA 4.0 License with &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;link to license&lt;/a&gt; and placeholder for designer name.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FRAME_LEDGER&lt;/li&gt;
+&lt;li&gt;FRAME_LETTER&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<text x="-20.32" y="5.08" size="1.778" layer="51" font="vector">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
+<text x="0" y="2.54" size="1.778" layer="51" font="vector"> https://creativecommons.org/licenses/by-sa/4.0/</text>
+<text x="11.43" y="0" size="1.778" layer="51" font="vector">Designed by:</text>
+</package>
+</packages>
+<symbols>
+<symbol name="FRAME_LEDGER">
+<description>&lt;h3&gt;Schematic Frame - Ledger&lt;/h3&gt;
+&lt;p&gt;Standard 11x14 US Ledger frame&lt;/p&gt;
+&lt;p&gt;Devices using&lt;ul&gt;&lt;li&gt;FRAME-LEDGER&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="0" y1="0" x2="0" y2="279.4" width="0.4064" layer="94"/>
+<wire x1="0" y1="279.4" x2="431.8" y2="279.4" width="0.4064" layer="94"/>
+<wire x1="431.8" y1="279.4" x2="431.8" y2="0" width="0.4064" layer="94"/>
+<wire x1="431.8" y1="0" x2="0" y2="0" width="0.4064" layer="94"/>
+</symbol>
+<symbol name="DOCFIELD">
+<description>&lt;h3&gt;Schematic Documentation Field&lt;/h3&gt;
+&lt;p&gt;Autofilling schematic symbol-layer info including board name, designer, revision, and save date.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FRAME-LEDGER&lt;/li&gt;
+&lt;li&gt;FRAME-LETTER&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="87.63" y2="15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="71.12" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="15.24" width="0.254" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="101.6" y2="5.08" width="0.254" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="87.63" y2="5.08" width="0.254" layer="94"/>
+<wire x1="71.12" y1="0" x2="101.6" y2="0" width="0.254" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="87.63" y2="5.08" width="0.254" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<wire x1="87.63" y1="5.08" x2="101.6" y2="5.08" width="0.254" layer="94"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="15.24" x2="0" y2="22.86" width="0.254" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="0" y2="35.56" width="0.254" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="101.6" y2="22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="22.86" x2="101.6" y2="22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="22.86" x2="0" y2="35.56" width="0.254" layer="94"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="15.24" width="0.254" layer="94"/>
+<text x="1.27" y="1.27" size="2.54" layer="94" font="vector">Date:</text>
+<text x="12.7" y="1.27" size="2.54" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="72.39" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="86.36" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="88.9" y="11.43" size="2.54" layer="94" font="vector">REV:</text>
+<text x="1.524" y="17.78" size="2.54" layer="94" font="vector">TITLE:</text>
+<text x="15.494" y="17.78" size="2.7432" layer="94" font="vector">&gt;DRAWING_NAME</text>
+<text x="2.54" y="31.75" size="1.9304" layer="94">Released under the Creative Commons</text>
+<text x="2.54" y="27.94" size="1.9304" layer="94">Attribution Share-Alike 4.0 License</text>
+<text x="2.54" y="24.13" size="1.9304" layer="94"> https://creativecommons.org/licenses/by-sa/4.0/</text>
+<text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FRAME-LEDGER" prefix="FRAME">
+<description>&lt;h3&gt;Schematic Frame - Ledger&lt;/h3&gt;
+&lt;p&gt;Standard 11x14 US Ledger frame&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FRAME_LEDGER" x="0" y="0"/>
+<gate name="G$2" symbol="DOCFIELD" x="330.2" y="0" addlevel="must"/>
+</gates>
+<devices>
+<device name="" package="CREATIVE_COMMONS">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -14474,20 +14642,15 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <part name="U1" library="LTC4015_LTC4015EUHF&amp;hash_PBF" deviceset="LTC4015EUHFPBF" device="QFN-38_UHF-M"/>
 <part name="X1" library="microbuilder" deviceset="TERMBLOCK_1X2" device="" value="6V_PV"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="47k"/>
-<part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="226k"/>
-<part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="64.9k"/>
+<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="200k"/>
 <part name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="10 uF"/>
 <part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="10 uF"/>
 <part name="C4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="10 uF"/>
 <part name="C5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="10 uF"/>
 <part name="C6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="100 pF"/>
-<part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="50k"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="RCCREF" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="301k"/>
 <part name="C8" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="0.1 uF"/>
 <part name="C9" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="10 uF"/>
@@ -14526,6 +14689,9 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <part name="C28" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="1000 pF"/>
 <part name="M5" library="RCT" deviceset="FDMC8327L" device=""/>
 <part name="DB" library="RCT" deviceset="1N4448HLP" device=""/>
+<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LEDGER" device=""/>
+<part name="U$4" library="RCT" deviceset="XAL1010-103ME" device="-103ME"/>
+<part name="RSNS" library="RCT" deviceset="KRL3216T4A-M-R004-F-T1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14573,20 +14739,15 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <attribute name="NAME" x="15.24" y="157.48" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="GND1" gate="1" x="20.32" y="144.78"/>
-<instance part="R1" gate="G$1" x="27.94" y="147.32" rot="R90"/>
-<instance part="R2" gate="G$1" x="22.86" y="137.16"/>
-<instance part="R3" gate="G$1" x="35.56" y="147.32" rot="R90"/>
-<instance part="R4" gate="G$1" x="35.56" y="134.62" rot="R90"/>
+<instance part="R3" gate="G$1" x="35.56" y="142.24" rot="R90"/>
 <instance part="C2" gate="G$1" x="55.88" y="147.32"/>
 <instance part="C3" gate="G$1" x="66.04" y="147.32"/>
 <instance part="C4" gate="G$1" x="76.2" y="147.32"/>
 <instance part="C5" gate="G$1" x="86.36" y="147.32"/>
-<instance part="C6" gate="G$1" x="45.72" y="121.92"/>
-<instance part="R6" gate="G$1" x="35.56" y="121.92" rot="R90"/>
+<instance part="C6" gate="G$1" x="45.72" y="124.46"/>
+<instance part="R6" gate="G$1" x="35.56" y="124.46" rot="R90"/>
 <instance part="GND3" gate="1" x="35.56" y="114.3"/>
 <instance part="GND5" gate="1" x="71.12" y="137.16"/>
-<instance part="R7" gate="G$1" x="40.64" y="129.54"/>
-<instance part="GND6" gate="1" x="12.7" y="137.16" rot="R270"/>
 <instance part="RCCREF" gate="G$1" x="55.88" y="104.14" smashed="yes" rot="R270">
 <attribute name="NAME" x="57.3786" y="110.49" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="52.578" y="107.95" size="1.778" layer="96" rot="R270"/>
@@ -14620,7 +14781,7 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <instance part="U$8" gate="G$1" x="149.86" y="58.42"/>
 <instance part="C27" gate="G$1" x="129.54" y="76.2"/>
 <instance part="U$9" gate="G$1" x="129.54" y="68.58"/>
-<instance part="RNTCBIAS" gate="G$1" x="124.46" y="68.58" rot="R90"/>
+<instance part="RNTCBIAS" gate="G$1" x="124.46" y="71.12" rot="R90"/>
 <instance part="U$10" gate="G$1" x="124.46" y="58.42"/>
 <instance part="M3AB" gate="G$1" x="177.8" y="99.06"/>
 <instance part="U$11" gate="G$1" x="177.8" y="71.12"/>
@@ -14634,13 +14795,17 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <attribute name="NAME" x="129.54" y="111.76" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="139.7" y="109.22" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="FRAME1" gate="G$2" x="330.2" y="0"/>
+<instance part="U$4" gate="G$1" x="198.12" y="99.06"/>
+<instance part="RSNS" gate="G$1" x="195.58" y="60.96" rot="R90"/>
 </instances>
 <busses>
-<bus name="DVCC,SCL,SDA,SMBALERT">
+<bus name="EQ,DVCC,SCL,SDA,SMBALERT">
 <segment>
-<wire x1="22.86" y1="96.52" x2="22.86" y2="88.9" width="0.762" layer="92"/>
-<wire x1="71.12" y1="96.52" x2="71.12" y2="88.9" width="0.762" layer="92"/>
-<wire x1="22.86" y1="88.9" x2="71.12" y2="88.9" width="0.762" layer="92"/>
+<wire x1="22.86" y1="99.06" x2="22.86" y2="88.9" width="0.762" layer="92"/>
+<wire x1="73.66" y1="101.6" x2="73.66" y2="88.9" width="0.762" layer="92"/>
+<wire x1="22.86" y1="88.9" x2="73.66" y2="88.9" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>
@@ -14712,8 +14877,9 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="116.84" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
-<junction x="35.56" y="116.84"/>
+<wire x1="45.72" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
+<junction x="35.56" y="119.38"/>
+<wire x1="35.56" y1="119.38" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="2"/>
@@ -14723,19 +14889,17 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="142.24" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="142.24" x2="76.2" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="142.24" x2="86.36" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="142.24" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="17.78" y1="137.16" x2="15.24" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
+<junction x="66.04" y="142.24"/>
+<wire x1="76.2" y1="142.24" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
+<junction x="76.2" y="142.24"/>
+<junction x="71.12" y="142.24"/>
+<wire x1="86.36" y1="142.24" x2="76.2" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -14759,14 +14923,21 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <wire x1="58.42" y1="63.5" x2="58.42" y2="64.77" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="CELLS2"/>
 <pinref part="U1" gate="A" pin="CELLS1"/>
-<pinref part="U1" gate="A" pin="CHEM1"/>
-<wire x1="76.2" y1="116.84" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
-<junction x="76.2" y="121.92"/>
-<wire x1="76.2" y1="124.46" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="121.92" x2="68.58" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="121.92" x2="73.66" y2="121.92" width="0.1524" layer="91"/>
 <label x="68.58" y="121.92" size="1.778" layer="95"/>
+<wire x1="73.66" y1="121.92" x2="68.58" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="121.92" x2="73.66" y2="116.84" width="0.1524" layer="91"/>
+<junction x="73.66" y="121.92"/>
+<pinref part="U1" gate="A" pin="CHEM1"/>
+<wire x1="73.66" y1="116.84" x2="76.2" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="116.84" x2="73.66" y2="109.22" width="0.1524" layer="91"/>
+<junction x="73.66" y="116.84"/>
+<pinref part="U1" gate="A" pin="MPPT"/>
+<wire x1="73.66" y1="109.22" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="121.92" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="CELLS2"/>
+<wire x1="73.66" y1="124.46" x2="76.2" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="SGND"/>
@@ -14792,10 +14963,11 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <wire x1="129.54" y1="71.12" x2="129.54" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RNTCBIAS" gate="G$1" pin="1"/>
 <pinref part="U$10" gate="G$1" pin="GND"/>
-<wire x1="124.46" y1="63.5" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="RNTCBIAS" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="66.04" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="NTC"/>
+<wire x1="124.46" y1="63.5" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="76.2" x2="119.38" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="63.5" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
 <junction x="124.46" y="63.5"/>
@@ -15001,11 +15173,15 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <net name="UVCLFB" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="129.54" x2="45.72" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="129.54" x2="45.72" y2="127" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="UVCLFB"/>
 <wire x1="76.2" y1="129.54" x2="45.72" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="129.54" x2="35.56" y2="129.54" width="0.1524" layer="91"/>
 <junction x="45.72" y="129.54"/>
+<junction x="35.56" y="129.54"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="129.54" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -15023,15 +15199,6 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <wire x1="86.36" y1="149.86" x2="86.36" y2="152.4" width="0.1524" layer="91"/>
 <junction x="66.04" y="152.4"/>
 <junction x="76.2" y="152.4"/>
-<pinref part="X1" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="152.4" x2="27.94" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="152.4" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<junction x="27.94" y="152.4"/>
-<junction x="35.56" y="152.4"/>
-<junction x="55.88" y="152.4"/>
 <wire x1="86.36" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
 <junction x="86.36" y="152.4"/>
 <pinref part="U1" gate="A" pin="VIN"/>
@@ -15039,29 +15206,13 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <wire x1="96.52" y1="152.4" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
 <junction x="96.52" y="152.4"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="142.24" x2="35.56" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<junction x="35.56" y="129.54"/>
-<wire x1="35.56" y1="129.54" x2="35.56" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="142.24" x2="27.94" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<junction x="55.88" y="152.4"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="152.4" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="147.32" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<junction x="35.56" y="152.4"/>
 </segment>
 </net>
 <net name="SYS" class="0">
@@ -15152,31 +15303,31 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <net name="SCL" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="SCL"/>
-<wire x1="71.12" y1="93.98" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="93.98" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="17.78" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
-<label x="17.78" y="93.98" size="1.778" layer="95"/>
+<wire x1="15.24" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+<label x="15.24" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="SDA"/>
-<wire x1="71.12" y1="91.44" x2="76.2" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="76.2" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="17.78" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
-<label x="17.78" y="91.44" size="1.778" layer="95"/>
+<wire x1="15.24" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<label x="15.24" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SMBALERT" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="!SMBALERT"/>
-<wire x1="71.12" y1="88.9" x2="76.2" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="88.9" x2="76.2" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="17.78" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
-<label x="17.78" y="88.9" size="1.778" layer="95"/>
+<wire x1="15.24" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
+<label x="15.24" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -15196,13 +15347,14 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <net name="CSP" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="CSP"/>
-<wire x1="119.38" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="88.9" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="83.82" x2="147.32" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="88.9" x2="139.7" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="83.82" x2="147.32" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="83.82" x2="157.48" y2="83.82" width="0.1524" layer="91"/>
 <junction x="147.32" y="83.82"/>
 <pinref part="C24" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="83.82" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="83.82" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CSPM5" class="0">
@@ -15215,12 +15367,13 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <net name="CSN" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="CSN"/>
-<wire x1="119.38" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="86.36" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="76.2" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="86.36" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="86.36" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="76.2" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="76.2" x2="157.48" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
 <junction x="147.32" y="76.2"/>
+<wire x1="165.1" y1="53.34" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BAT" class="0">
@@ -15228,15 +15381,20 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <pinref part="C25" gate="G$1" pin="1"/>
 <pinref part="C26" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="68.58" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="68.58" x2="132.08" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="68.58" x2="132.08" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="68.58" x2="134.62" y2="83.82" width="0.1524" layer="91"/>
 <junction x="144.78" y="68.58"/>
 <pinref part="U1" gate="A" pin="BATSENS"/>
-<wire x1="132.08" y1="83.82" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="83.82" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
 <label x="137.16" y="68.58" size="1.778" layer="95"/>
+<wire x1="154.94" y1="68.58" x2="162.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="68.58" x2="162.56" y2="50.8" width="0.1524" layer="91"/>
+<junction x="154.94" y="68.58"/>
+<wire x1="162.56" y1="50.8" x2="226.06" y2="50.8" width="0.1524" layer="91"/>
+<label x="220.98" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="2P5VCC" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="2P5VCC"/>
 <pinref part="C27" gate="G$1" pin="1"/>
@@ -15248,7 +15406,7 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <pinref part="U1" gate="A" pin="NTCBIAS"/>
 <wire x1="119.38" y1="78.74" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="RNTCBIAS" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="78.74" x2="124.46" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="78.74" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SYSM5_DRAIN_2" class="0">
@@ -15289,23 +15447,14 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <junction x="180.34" y="99.06"/>
 <wire x1="177.8" y1="104.14" x2="182.88" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="104.14" x2="182.88" y2="99.06" width="0.1524" layer="91"/>
-<junction x="182.88" y="99.06"/>
 <pinref part="U1" gate="A" pin="SW"/>
 <wire x1="119.38" y1="99.06" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="CB" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 <junction x="124.46" y="99.06"/>
-<pinref part="M4" gate="G$1" pin="S1"/>
-<wire x1="215.9" y1="106.68" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="99.06" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="M4" gate="G$1" pin="G1"/>
-<wire x1="208.28" y1="99.06" x2="182.88" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="111.76" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
-<junction x="208.28" y="99.06"/>
-<pinref part="M4" gate="G$1" pin="S2"/>
-<wire x1="223.52" y1="106.68" x2="223.52" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
-<junction x="215.9" y="99.06"/>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="182.88" y1="99.06" x2="193.04" y2="99.06" width="0.1524" layer="91"/>
+<junction x="182.88" y="99.06"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -15321,10 +15470,10 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <segment>
 <pinref part="U1" gate="A" pin="OUTFET"/>
 <wire x1="119.38" y1="116.84" x2="205.74" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="116.84" x2="205.74" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="106.68" x2="218.44" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="116.84" x2="205.74" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="104.14" x2="218.44" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="M4" gate="G$1" pin="G2"/>
-<wire x1="218.44" y1="106.68" x2="218.44" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="104.14" x2="218.44" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -15367,11 +15516,37 @@ MOSFET N-CH 40V 12A 8MLP</description>
 <net name="DVCC" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="DVCC"/>
-<wire x1="71.12" y1="96.52" x2="76.2" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="96.52" x2="76.2" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="22.86" y1="96.52" x2="17.78" y2="96.52" width="0.1524" layer="91"/>
-<label x="17.78" y="96.52" size="1.778" layer="95"/>
+<wire x1="22.86" y1="96.52" x2="15.24" y2="96.52" width="0.1524" layer="91"/>
+<label x="15.24" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="EQ" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="EQ"/>
+<wire x1="76.2" y1="101.6" x2="73.66" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="22.86" y1="99.06" x2="15.24" y2="99.06" width="0.1524" layer="91"/>
+<label x="15.24" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="M4" gate="G$1" pin="S1"/>
+<wire x1="215.9" y1="106.68" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="M4" gate="G$1" pin="S2"/>
+<wire x1="223.52" y1="106.68" x2="223.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<junction x="215.9" y="99.06"/>
+<wire x1="215.9" y1="99.06" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="M4" gate="G$1" pin="G1"/>
+<wire x1="208.28" y1="111.76" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="P$2"/>
+<wire x1="208.28" y1="99.06" x2="203.2" y2="99.06" width="0.1524" layer="91"/>
+<junction x="208.28" y="99.06"/>
 </segment>
 </net>
 </nets>
