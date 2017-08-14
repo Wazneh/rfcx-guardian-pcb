@@ -15265,6 +15265,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="RED"/>
 <part name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="JST_2PIN" device="-THM"/>
 <part name="U$12" library="microbuilder" deviceset="GND" device=""/>
+<part name="R1" library="microbuilder" deviceset="RESISTOR" device="_0805MP" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -15411,6 +15412,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="RED" gate="G$1" x="345.44" y="73.66" rot="R270"/>
 <instance part="CN1" gate="G$1" x="236.22" y="45.72"/>
 <instance part="U$12" gate="G$1" x="226.06" y="40.64"/>
+<instance part="R1" gate="G$1" x="60.96" y="129.54" rot="R180"/>
 </instances>
 <busses>
 <bus name="EQ,DVCC,SCL,SDA,SMBALERT">
@@ -15897,14 +15899,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="129.54" x2="45.72" y2="127" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="UVCLFB"/>
-<wire x1="76.2" y1="129.54" x2="45.72" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="129.54" x2="35.56" y2="129.54" width="0.1524" layer="91"/>
-<junction x="45.72" y="129.54"/>
 <junction x="35.56" y="129.54"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="129.54" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="129.54" x2="55.88" y2="129.54" width="0.1524" layer="91"/>
+<junction x="45.72" y="129.54"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -16285,6 +16287,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="R39" gate="G$1" pin="1"/>
 <pinref part="RED" gate="G$1" pin="A"/>
 <wire x1="345.44" y1="78.74" x2="345.44" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="U1" gate="A" pin="UVCLFB"/>
+<wire x1="66.04" y1="129.54" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

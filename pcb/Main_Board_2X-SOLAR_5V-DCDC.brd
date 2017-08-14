@@ -3455,6 +3455,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="54.222" y="3.103" size="0.4064" layer="27" ratio="10"/>
 </element>
 <element name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="JST-PH-2-THM" value="" x="44.19" y="11.29" smashed="yes" rot="R90"/>
+<element name="R1" library="microbuilder" package="_0805MP" value="10k" x="9.5" y="18.5" rot="R180"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -3856,15 +3857,15 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="UVCLFB">
 <contactref element="C6" pad="1"/>
-<contactref element="U1" pad="8"/>
 <contactref element="R6" pad="2"/>
 <contactref element="R3" pad="1"/>
 <wire x1="4.5" y1="15" x2="4.625" y2="14.875" width="0.3048" layer="1"/>
 <wire x1="4.625" y1="14.875" x2="6.5" y2="14.85" width="0.8128" layer="1" curve="-5.349506"/>
-<wire x1="11.7468" y1="18.5" x2="9.25" y2="18.5" width="0.254" layer="1"/>
 <wire x1="7.25" y1="16.5" x2="9.25" y2="18.5" width="0.254" layer="1"/>
 <wire x1="6.5" y1="14.85" x2="6.5" y2="15.75" width="0.254" layer="1"/>
 <wire x1="6.5" y1="15.75" x2="7.25" y2="16.5" width="0.254" layer="1"/>
+<contactref element="R1" pad="2"/>
+<wire x1="4.5" y1="15" x2="8.484" y2="18.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="C2" pad="1"/>
@@ -4481,6 +4482,11 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="RED" pad="A"/>
 <wire x1="53.55" y1="6.5" x2="53.55" y2="5.9" width="0.1524" layer="1"/>
 <wire x1="53.55" y1="5.9" x2="54.95" y2="4.5" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$5">
+<contactref element="R1" pad="1"/>
+<contactref element="U1" pad="8"/>
+<wire x1="10.516" y1="18.5" x2="11.7468" y2="18.5" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <errors>
