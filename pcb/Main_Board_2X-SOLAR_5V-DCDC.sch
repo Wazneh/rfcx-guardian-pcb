@@ -16375,17 +16375,13 @@ Source: AVX .. aphvc.pdf</description>
 <text x="58.42" y="26.67" size="1.778" layer="97">Charge Rate = 1000V/PROG1</text>
 <text x="69.85" y="22.86" size="1.778" layer="97">1.0K = 1000mA</text>
 <text x="69.85" y="20.32" size="1.778" layer="97">2.0K = 500mA</text>
-<text x="155.448" y="15.24" size="1.778" layer="97">No Thermistor:</text>
+<text x="147.828" y="15.24" size="1.778" layer="97">No Thermistor:</text>
 <text x="147.32" y="11.43" size="1.778" layer="97">10K NTC Thermistor:</text>
 <text x="177.8" y="15.24" size="1.778" layer="97">RT1 = 0, RT2 = 10K</text>
 <text x="177.8" y="11.43" size="1.778" layer="97">RT1 = TBD, RT2 = TBD</text>
 <text x="58.42" y="113.03" size="1.778" layer="97">Charge Rate = 1000V/PROG1</text>
 <text x="69.85" y="109.22" size="1.778" layer="97">1.0K = 1000mA</text>
 <text x="69.85" y="106.68" size="1.778" layer="97">2.0K = 500mA</text>
-<text x="127.508" y="101.6" size="1.778" layer="97">No Thermistor:</text>
-<text x="127" y="97.79" size="1.778" layer="97">10K NTC Thermistor:</text>
-<text x="147.32" y="101.6" size="1.778" layer="97">RT1 = 0, RT2 = 10K</text>
-<text x="152.4" y="97.79" size="1.778" layer="97">RT1 = TBD, RT2 = TBD</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="137.16" y="52.07"/>
