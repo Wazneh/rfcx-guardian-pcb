@@ -15499,6 +15499,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <part name="OUTFET-Q4" library="TRANS_SI7635DP-T1-GE3" deviceset="SQ4401EY-PMOS" device=""/>
 <part name="INFET-Q1" library="TRANS_SI7635DP-T1-GE3" deviceset="SI4840DY" device=""/>
 <part name="JP2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
+<part name="C31" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" value="2.2 nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -15546,7 +15547,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <instance part="C3" gate="G$1" x="66.04" y="147.32"/>
 <instance part="C4" gate="G$1" x="76.2" y="147.32"/>
 <instance part="C5" gate="G$1" x="86.36" y="147.32"/>
-<instance part="C6" gate="G$1" x="45.72" y="124.46"/>
+<instance part="C6" gate="G$1" x="58.42" y="124.46"/>
 <instance part="R6" gate="G$1" x="35.56" y="124.46" rot="R90"/>
 <instance part="GND3" gate="1" x="35.56" y="114.3"/>
 <instance part="GND5" gate="1" x="71.12" y="137.16"/>
@@ -15631,7 +15632,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <instance part="RED" gate="G$1" x="345.44" y="73.66" rot="R270"/>
 <instance part="CN1" gate="G$1" x="236.22" y="45.72"/>
 <instance part="U$12" gate="G$1" x="226.06" y="40.64"/>
-<instance part="R1" gate="G$1" x="60.96" y="129.54" rot="R180"/>
+<instance part="R1" gate="G$1" x="50.8" y="129.54" rot="R180"/>
 <instance part="C29" gate="G$1" x="236.22" y="147.32" smashed="yes">
 <attribute name="NAME" x="238.76" y="150.876" size="1.27" layer="95" font="vector"/>
 <attribute name="VALUE" x="233.426" y="142.24" size="1.27" layer="96" font="vector"/>
@@ -15643,6 +15644,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 </instance>
 <instance part="INFET-Q1" gate="G$1" x="124.46" y="152.4" rot="MR90"/>
 <instance part="JP2" gate="A" x="99.06" y="144.78" rot="R270"/>
+<instance part="C31" gate="G$1" x="45.72" y="142.24"/>
 </instances>
 <busses>
 <bus name="EQ,DVCC,SCL,SDA,SMBALERT">
@@ -15711,7 +15713,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
 <junction x="35.56" y="119.38"/>
 <wire x1="35.56" y1="119.38" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
 </segment>
@@ -16123,15 +16125,14 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 </net>
 <net name="UVCLFB" class="0">
 <segment>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="129.54" x2="45.72" y2="127" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="129.54" x2="35.56" y2="129.54" width="0.1524" layer="91"/>
 <junction x="35.56" y="129.54"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="129.54" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="129.54" x2="55.88" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="C31" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="137.16" x2="45.72" y2="129.54" width="0.1524" layer="91"/>
 <junction x="45.72" y="129.54"/>
 </segment>
 </net>
@@ -16159,11 +16160,15 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <wire x1="20.32" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
 <junction x="55.88" y="152.4"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="152.4" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="152.4" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="152.4" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="147.32" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
 <junction x="35.56" y="152.4"/>
 <pinref part="INFET-Q1" gate="G$1" pin="S"/>
 <pinref part="JP2" gate="A" pin="1"/>
+<pinref part="C31" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="144.78" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
+<junction x="45.72" y="152.4"/>
 </segment>
 </net>
 <net name="RT" class="0">
@@ -16508,7 +16513,11 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="U1" gate="A" pin="UVCLFB"/>
-<wire x1="66.04" y1="129.54" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="129.54" x2="58.42" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="129.54" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="127" x2="58.42" y2="129.54" width="0.1524" layer="91"/>
+<junction x="58.42" y="129.54"/>
 </segment>
 </net>
 <net name="N$10" class="0">
