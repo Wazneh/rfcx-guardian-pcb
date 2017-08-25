@@ -14588,12 +14588,12 @@ Source: AVX .. aphvc.pdf</description>
 <circle x="-2" y="0.95" radius="0.111803125" width="0.2" layer="21"/>
 <text x="-2" y="2" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2" y="-3.2" size="1.27" layer="27">&gt;VALUE</text>
-<smd name="1" x="-1.39" y="0.9779" dx="0.52" dy="0.45" layer="1"/>
+<smd name="1" x="-1.44" y="1.03" dx="0.62" dy="0.55" layer="1"/>
 <smd name="9" x="0.55" y="0" dx="0.75" dy="2.52" layer="1"/>
 <smd name="10" x="-0.55" y="0" dx="0.75" dy="2.52" layer="1"/>
-<smd name="4" x="-1.39" y="-0.325" dx="0.52" dy="1.75" layer="1"/>
-<smd name="5" x="1.39" y="-0.325" dx="0.52" dy="1.75" layer="1"/>
-<smd name="8" x="1.39" y="0.9779" dx="0.52" dy="0.45" layer="1"/>
+<smd name="4" x="-1.44" y="-0.325" dx="0.62" dy="1.75" layer="1"/>
+<smd name="5" x="1.44" y="-0.325" dx="0.62" dy="1.75" layer="1"/>
+<smd name="8" x="1.44" y="1.03" dx="0.62" dy="0.55" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -15315,6 +15315,78 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="jumper" urn="urn:adsk.eagle:library:252">
+<description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="JP1" urn="urn:adsk.eagle:footprint:15398/1" library_version="1">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-2.54" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="2.54" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="1.016" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="-1.27" drill="0.9144" shape="long"/>
+<pad name="2" x="0" y="1.27" drill="0.9144" shape="long"/>
+<text x="-1.651" y="-2.54" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="2.921" y="-2.54" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.3048" y1="0.9652" x2="0.3048" y2="1.5748" layer="51"/>
+<rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="JP1" urn="urn:adsk.eagle:package:15455/1" type="box" library_version="1">
+<description>JUMPER</description>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="JP2E" urn="urn:adsk.eagle:symbol:15391/1" library_version="1">
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-0.635" y1="0" x2="3.175" y2="0" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.175" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0.635" x2="-0.635" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.4064" layer="94"/>
+<text x="-1.27" y="0" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="0" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="2.54" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="JP1E" urn="urn:adsk.eagle:component:15487/1" prefix="JP" uservalue="yes" library_version="1">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="JP2E" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="JP1">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15455/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -15426,6 +15498,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <part name="D1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="DIODE" device="SOD-123"/>
 <part name="OUTFET-Q4" library="TRANS_SI7635DP-T1-GE3" deviceset="SQ4401EY-PMOS" device=""/>
 <part name="INFET-Q1" library="TRANS_SI7635DP-T1-GE3" deviceset="SI4840DY" device=""/>
+<part name="JP2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -15569,6 +15642,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <attribute name="NAME" x="227.33" y="113.03" size="1.778" layer="95" rot="MR180"/>
 </instance>
 <instance part="INFET-Q1" gate="G$1" x="124.46" y="152.4" rot="MR90"/>
+<instance part="JP2" gate="A" x="99.06" y="144.78" rot="R270"/>
 </instances>
 <busses>
 <bus name="EQ,DVCC,SCL,SDA,SMBALERT">
@@ -16078,8 +16152,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <junction x="76.2" y="152.4"/>
 <wire x1="86.36" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
 <junction x="86.36" y="152.4"/>
-<pinref part="U1" gate="A" pin="VIN"/>
-<wire x1="96.52" y1="152.4" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="152.4" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
 <junction x="96.52" y="152.4"/>
 <pinref part="X1" gate="G$1" pin="1"/>
@@ -16090,6 +16163,7 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <wire x1="35.56" y1="147.32" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
 <junction x="35.56" y="152.4"/>
 <pinref part="INFET-Q1" gate="G$1" pin="S"/>
+<pinref part="JP2" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="RT" class="0">
@@ -16446,6 +16520,13 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 <wire x1="200.66" y1="114.3" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="VIN"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="96.52" y1="142.24" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -16468,6 +16549,16 @@ body 3.9 mm/JEDEC MS-012AA&lt;p&gt;
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
